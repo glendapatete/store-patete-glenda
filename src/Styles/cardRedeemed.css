@@ -1,0 +1,26 @@
+.card-redeemed{
+    background-color: #fff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.card-redeemed-info{
+    border-top: 1px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+}
+
+.card-redeemed-info li{
+    padding: 5px;
+}
+
+.card-redeemed-cost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-redeemed-category{
+    color: #A3A3A3;
+}

@@ -42,8 +42,6 @@ header{
     margin-right: 15px;
 }
 
-
-
 .content-subheader{
     height: auto;
     position: relative;
@@ -86,4 +84,17 @@ header{
     height: 24px;
     width: 24px;
     margin: 0px 15px;
+}
+
+.content-header-home{
+    margin: 0 15px;
+}
+
+.content-header-home img{
+    border-radius: 50%;
+    background-color: #1DC7F5;
+    padding: 5px;
+    height: 24px;
+    width: 24px;
+    fill: green;
 }

@@ -17,7 +17,7 @@ export default function Card({category, name, cost, img, id}){
             },
             body: JSON.stringify({"productId" : productId.id})
         }
-        let request = fetch(
+        fetch(
             `https://coding-challenge-api.aerolab.co/redeem`,header
         ).then((response) => {
             response.json().then((resp) => {

@@ -1,19 +1,19 @@
-import Header from "./Components/Header";
-import Container from "./Components/Container";
-import { AppProvider } from "./Context/UserContext";
-import { CoinProvider } from "./Context/CoinContext";
-import { ProductProvider } from "./Context/ProductContext";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from "./Pages/Home";
+import Redeem from "./Pages/Redeem";
 function App() {
   return (
     <div className="App">
-      <CoinProvider>
-        <AppProvider>
-          <Header />
-        </AppProvider>
-      </CoinProvider>
-      <ProductProvider>
-        <Container />
-      </ProductProvider>
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/redeems">
+            <Redeem />
+          </Route>
+        </Switch>  
+      </Router>
     </div>
   );
 }
