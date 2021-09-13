@@ -2,6 +2,7 @@ import Header from "./Components/Header";
 import Container from "./Components/Container";
 import { AppProvider } from "./Context/UserContext";
 import { CoinProvider } from "./Context/CoinContext";
+import { ProductProvider } from "./Context/ProductContext";
 function App() {
   return (
     <div className="App">
@@ -10,8 +11,9 @@ function App() {
           <Header />
         </AppProvider>
       </CoinProvider>
-      <Container />
-      
+      <ProductProvider>
+        <Container />
+      </ProductProvider>
     </div>
   );
 }

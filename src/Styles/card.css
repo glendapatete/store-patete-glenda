@@ -105,6 +105,8 @@
     padding: 0px 100px;
     text-decoration: none;
     line-height: 51px;
+    border: none;
+    cursor: pointer;
 }
 
 .container-card:hover .card-hover{

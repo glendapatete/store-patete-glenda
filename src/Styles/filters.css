@@ -1,0 +1,25 @@
+.content-filters{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 10px 20px;
+    border-bottom: 1px solid black;
+}
+
+.content-filters li {
+    padding-bottom: 10px;
+}
+
+.pagination{
+    color: #616161;
+   position: relative; 
+}
+
+.pagination::after{
+    content: "";
+    position: absolute;
+    top: 0px; /* control the 'height' with top/bottom */
+    bottom: 5px;
+    margin: 0px 5px;
+    width: 2px; 
+    background-color: #D9D9D9;
+}

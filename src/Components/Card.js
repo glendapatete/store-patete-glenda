@@ -1,7 +1,6 @@
-import Coins from "./Coins";
 import "../Styles/card.css";
 
-export default function Card({category, name, cost, img, key}){
+export default function Card({category, name, cost, img, id}){
     
     return(
         <div className="container-card">
@@ -26,10 +25,10 @@ export default function Card({category, name, cost, img, key}){
                     <li className="card-buy-info">
                         <ul className="card-buy-info-coins">
                             <li className="card-coins">
-                                <span>12.000</span> <img src="../images/coin.svg" alt="coin"/> 
+                                <span>{cost}</span> <img src="../images/coin.svg" alt="coin"/> 
                             </li>
                             <li className="card-buy">
-                                <a className="card-buy-link" href="">Redeem now</a>
+                                <button className="card-buy-link" data-id={id}>Redeem now</button>
                             </li>   
                         </ul>
                     </li>

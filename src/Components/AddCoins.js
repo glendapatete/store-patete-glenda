@@ -1,12 +1,9 @@
 import Coins from "./Coins";
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "../Styles/addcoins.css";
-import { UserContext } from "../Context/UserContext";
 import { CoinContext } from "../Context/CoinContext";
 
 export default function AddCoins({display}){
-
-    const { setData } = useContext(UserContext);
     
     const { setCoin } = useContext(CoinContext);
 
