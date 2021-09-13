@@ -1,0 +1,19 @@
+.content-coin{
+    background-color: #EDEDED;
+    min-width: 100px;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.content-coin span{
+    margin-right: 15px;
+}
+
+.content-header-add button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}

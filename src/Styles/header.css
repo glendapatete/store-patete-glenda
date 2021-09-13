@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: "Roboto", sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swa");
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+header{
+    background-color: #fff;
+}
+
+.content-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 42px;
+    max-height: 80px;
+    width: 100%;
+}
+
+.content-header-left ul, .content-header-coins{
+    display: flex;
+    align-items: center;
+}
+
+.content-header-user{
+    margin-right: 15px;
+}
+
+
+
+.content-subheader{
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.content-subheader img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.content-subheader h1{
+    bottom: 10px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    left: 15px;
+    position: absolute;
+}
+
+@media screen and (min-width: 719px) {
+    .content-subheader h1{
+      font-size: 64px;
+    }
+  }
+
+.content-header-add{
+    position: relative;
+}
+
+.coin-plus{
+    height: 12px;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    width: 12px;
+}
+
+.content-header-buy img{
+    height: 24px;
+    width: 24px;
+    margin: 0px 15px;
+}

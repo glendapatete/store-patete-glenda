@@ -1,0 +1,62 @@
+.content-add-coins{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    right: -30px;
+    display: block;
+    height: 150px;
+    top: 52px;
+    text-align: center;
+    width: 400px;
+    z-index: 2;
+}
+
+.content-add-coins button{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.show-add{
+    display: none;
+}
+
+.add-label{
+    cursor: pointer;
+}
+
+.content-add-coins .content-coin:hover{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.content-buttons-coins{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    width: 400px;
+}
+
+.content-add-coins::before, .content-add-coins::after {
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 35px;
+}
+.content-add-coins::before {
+    border-color: #ccc transparent;
+    right: 35px;
+    top: -10px;
+}
+.content-add-coins::after {
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: #fff transparent;
+    display: block;
+    content: "";
+    position: absolute;
+    top: -9px;
+}
