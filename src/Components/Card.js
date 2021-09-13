@@ -1,7 +1,31 @@
+import React, { useState } from 'react';
 import "../Styles/card.css";
 
 export default function Card({category, name, cost, img, id}){
     
+    const [msg, setMsg] = useState("");
+
+    const handleRedeem = (e, productId) => {
+        e.preventDefault()
+
+        const header = { 
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTIxMWM1MDNiYTYyNzAwMjE3YTMyYTUiLCJpYXQiOjE2Mjk1NTk4ODh9._RhHYJ369kzR-tWJuSbe2qng4WM-4t5GtGFbDG4Ed_4'
+            },
+            body: JSON.stringify({"productId" : productId.id})
+        }
+        let request = fetch(
+            `https://coding-challenge-api.aerolab.co/redeem`,header
+        ).then((response) => {
+            response.json().then((resp) => {
+                console.log(resp.message)
+                setMsg(resp.message)
+            })
+        })
+    }
     return(
         <div className="container-card">
             <div className="card">
@@ -16,24 +40,34 @@ export default function Card({category, name, cost, img, id}){
                 
             </div>
             <div className="card-hover">
-                <ul className="card-hover-content">
-                    <li className="card-buy-white">
-                        <picture>
-                            <img src="../images/buy-white1.svg" alt="buy"/>
-                        </picture>
-                    </li>
-                    <li className="card-buy-info">
-                        <ul className="card-buy-info-coins">
-                            <li className="card-coins">
-                                <span>{cost}</span> <img src="../images/coin.svg" alt="coin"/> 
+                {
+                    msg === "" ? 
+                        <ul className="card-hover-content">
+                            <li className="card-buy-white">
+                                <picture>
+                                    <img src="../images/buy-white1.svg" alt="buy"/>
+                                </picture>
                             </li>
-                            <li className="card-buy">
-                                <button className="card-buy-link" data-id={id}>Redeem now</button>
-                            </li>   
+                            <li className="card-buy-info">
+                                <ul className="card-buy-info-coins">
+                                    <li className="card-coins">
+                                        <span>{cost}</span> <img src="../images/coin.svg" alt="coin"/> 
+                                    </li>
+                                    <li className="card-buy">
+                                        <button className="card-buy-link" onClick={(e)=>handleRedeem(e, {id})} data-id={id}>Redeem now</button>
+                                    </li>   
+                                </ul>
+                            </li>
+                            
                         </ul>
-                    </li>
+                    :
+                    <div className="success-reedem">
+                        <img src="../images/check.png" alt="success icon" />
+                        <h2 >{msg}</h2>
+                    </div>
                     
-                </ul>
+                }
+                
             </div>
         </div>
     )

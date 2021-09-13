@@ -135,3 +135,19 @@
 .card-buy-info-coins{
     width: 100%;
 }
+
+.success-reedem{
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.success-reedem img{
+    height: 60px;
+    width: 60px;
+}

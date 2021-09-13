@@ -22,7 +22,6 @@ export default function AddCoins({display}){
             `https://coding-challenge-api.aerolab.co/user/points`,header
         );
         request.then((response) => {
-            console.log(response)
             setCoin(response)
             return response.json();
         })
