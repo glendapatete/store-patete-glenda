@@ -21,7 +21,6 @@ function Redeem() {
             setdata(response.reverse());
         }).catch((error) => console.error("Error:", error));
     }, []);
-    console.log(data)
   return (
     <div className="App">
      

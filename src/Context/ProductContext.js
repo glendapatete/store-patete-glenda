@@ -1,10 +1,11 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext, useEffect, useContext } from "react";
+import { CoinContext } from "../Context/CoinContext";
 
 export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
     
-
+  const { coin } = useContext(CoinContext);
     const [data, setdata] = useState([]);
 
     useEffect(() => {
@@ -20,7 +21,7 @@ export const ProductProvider = ({ children }) => {
         .then((response) => {
             setdata(response);
         }).catch((error) => console.error("Error:", error));
-    }, []);
+    }, [coin]);
 
 
   return (

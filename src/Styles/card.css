@@ -108,6 +108,10 @@
     cursor: pointer;
 }
 
+.card-buy-link:hover {
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+}
+
 .container-card:hover .card-hover{
     display: block;
 }
@@ -149,4 +153,25 @@
 .success-reedem img{
     height: 60px;
     width: 60px;
+}
+
+.card-need{
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+    background: #616161;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 100px;
+    opacity: 0.8;
+    padding: 15px;
+}
+
+.card-need img{
+    margin-left: 5px;
 }

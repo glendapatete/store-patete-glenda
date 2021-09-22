@@ -10,7 +10,7 @@ export default function Filters(){
     const [products, setProducts] = useState(data);
     const [page, setPage] = useState(1);
     const PER_PAGE = 16;
-    const totalProducts = products.length;
+    
     const count = Math.ceil(products.length / PER_PAGE);
 
     useEffect(() => {
@@ -50,30 +50,33 @@ export default function Filters(){
     return(
         <>
             <ul className="content-filters">
-                <li className="pagination">{PER_PAGE} of {totalProducts} products</li>
-                <li>Sort by:</li>
-                <li>
-                    <button onClick={handleLowePrice}>Lower price</button> 
-                </li>
-                <li>
-                    <button onClick={handleHighestPrice}>Highest price</button> 
-                </li>
-                <div style={{ color: '#616161' }}>
-                    <span>
+                <li className="pagination">{page} of {count} pages</li>
+                <li className="content-filter-buttons">
+                    <ul className="">
+                        <li>Sort by:</li>
+                        <li>
+                            <button onClick={handleLowePrice}>Lower price</button> 
+                        </li>
+                        <li>
+                            <button onClick={handleHighestPrice}>Highest price</button> 
+                        </li>
                         
-                    </span>
-                    <button
-                        count={count}
-                        variant="outlined"
-                        page={page}
-                        onClick={handleChange}
-                    > {page !== count ?
-                        ">"
-                        :
-                        "<"
-                    }
-                    </button>
-                </div>
+                    </ul>
+                </li>
+                <li className="pagination-button">
+                            
+                            <button
+                                count={count}
+                                variant="outlined"
+                                page={page}
+                                onClick={handleChange}
+                            > {page !== count ?
+                                ">"
+                                :
+                                "<"
+                            }
+                            </button>
+                        </li>
             </ul> 
             <div className="content-card"> 
                 {_DATA &&
@@ -91,6 +94,9 @@ export default function Filters(){
                     })
                 }
             </div>
+            <ul className="content-filters">
+                <li className="pagination">{page} of {count} pages</li>
+            </ul>
         </>
     )
 }

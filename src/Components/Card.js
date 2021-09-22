@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from "react";
+import { UserContext } from "../Context/UserContext";
+import { CoinContext } from "../Context/CoinContext";
 import "../Styles/card.css";
 
 export default function Card({category, name, cost, img, id}){
     
     const [msg, setMsg] = useState("");
+
+    const {data} = useContext(UserContext);
+
+    const { setCoin } = useContext(CoinContext);
 
     const handleRedeem = (e, productId) => {
         e.preventDefault()
@@ -21,11 +27,15 @@ export default function Card({category, name, cost, img, id}){
             `https://coding-challenge-api.aerolab.co/redeem`,header
         ).then((response) => {
             response.json().then((resp) => {
-                console.log(resp.message)
+                setCoin(resp) /* actualizo este estado, para que me actualice la moneda en el header */
                 setMsg(resp.message)
+                setTimeout(function () {
+                    setMsg("");
+                }, 2000);
             })
         })
     }
+
     return(
         <div className="container-card">
             <div className="card">
@@ -36,7 +46,15 @@ export default function Card({category, name, cost, img, id}){
                     <span className="card-name">{name}</span>
                     <span className="card-category">{category}</span>
                 </div>
-                <span className="card-buy-blue"><img src="../images/buy-blue.svg" alt="buy"/></span>
+                {
+                    data.points >= cost ? 
+                        <span className="card-buy-blue"><img src="../images/buy-blue.svg" alt="buy"/></span>
+                    :
+                    <span className="card-need"> 
+                        You need {cost - data.points} <img src="../images/coin.svg" alt="coin"/> 
+                    </span>
+                }
+                
                 
             </div>
             <div className="card-hover">
@@ -53,9 +71,12 @@ export default function Card({category, name, cost, img, id}){
                                     <li className="card-coins">
                                         <span>{cost}</span> <img src="../images/coin.svg" alt="coin"/> 
                                     </li>
-                                    <li className="card-buy">
-                                        <button className="card-buy-link" onClick={(e)=>handleRedeem(e, {id})} data-id={id}>Redeem now</button>
-                                    </li>   
+                                    {
+                                        data.points >= cost &&
+                                            <li className="card-buy">
+                                                <button className="card-buy-link" onClick={(e)=>handleRedeem(e, {id})} data-id={id}>Redeem now</button>
+                                            </li>   
+                                    }
                                 </ul>
                             </li>
                             

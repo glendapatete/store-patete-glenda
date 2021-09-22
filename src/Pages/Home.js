@@ -11,11 +11,12 @@ function Home() {
         <CoinProvider>
           <AppProvider>
             <Header />
+            <ProductProvider>
+              <Container />
+            </ProductProvider>
           </AppProvider>
         </CoinProvider>
-        <ProductProvider>
-          <Container />
-        </ProductProvider>
+        
     </div>
   );
 }
