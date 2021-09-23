@@ -48,10 +48,10 @@ export default function Card({category, name, cost, img, id}){
                 </div>
                 {
                     data.points >= cost ? 
-                        <span className="card-buy-blue"><img src="../images/buy-blue.svg" alt="buy"/></span>
+                        <span className="card-buy-blue"><img src={process.env.PUBLIC_URL + "/images/buy-blue.svg"} alt="buy"/></span>
                     :
                     <span className="card-need"> 
-                        You need {cost - data.points} <img src="../images/coin.svg" alt="coin"/> 
+                        You need {cost - data.points} <img src={process.env.PUBLIC_URL + "/images/coin.svg"} alt="coin"/> 
                     </span>
                 }
                 
@@ -63,13 +63,13 @@ export default function Card({category, name, cost, img, id}){
                         <ul className="card-hover-content">
                             <li className="card-buy-white">
                                 <picture>
-                                    <img src="../images/buy-white1.svg" alt="buy"/>
+                                    <img src={process.env.PUBLIC_URL + "/images/buy-white1.svg"} alt="buy"/>
                                 </picture>
                             </li>
                             <li className="card-buy-info">
                                 <ul className="card-buy-info-coins">
                                     <li className="card-coins">
-                                        <span>{cost}</span> <img src="../images/coin.svg" alt="coin"/> 
+                                        <span>{cost}</span> <img src={process.env.PUBLIC_URL + "/images/coin.svg"} alt="coin"/> 
                                     </li>
                                     {
                                         data.points >= cost &&
@@ -83,7 +83,7 @@ export default function Card({category, name, cost, img, id}){
                         </ul>
                     :
                     <div className="success-reedem">
-                        <img src="../images/check.png" alt="success icon" />
+                        <img src={process.env.PUBLIC_URL + "/images/check.png"} alt="success icon" />
                         <h2 >{msg}</h2>
                     </div>
                     

@@ -15,7 +15,7 @@ export default function CardRedeemed({category, name, cost, img, createDate}){
                         
                         <li className="card-redeemed-name">{name}</li>
                         <li className="card-redeemed-cost">
-                            <img src="../images/coin.svg" alt="coin"/> <span>{cost}</span>
+                            <img src={process.env.PUBLIC_URL + "/images/coin.svg"} alt="coin"/> <span>{cost}</span>
                         </li>
                     </ul>
                 </div>

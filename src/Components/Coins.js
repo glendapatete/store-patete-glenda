@@ -5,7 +5,7 @@ export default function Coins({amount}){
     return(
         <div className="content-coin">
             <span>{amount}</span>
-            <img src="../images/coin.svg" alt=""/>
+            <img src={process.env.PUBLIC_URL + "/images/coin.svg"} alt=""/>
         </div>
     )
 }
