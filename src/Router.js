@@ -11,14 +11,11 @@ import {
 export default function Router() {
   return (
     <HashRouter>
-      
-
         <Switch>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
-     
     </HashRouter>
   );
 }
