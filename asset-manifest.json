@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/store-patete-glenda/static/css/main.1690b49f.chunk.css",
-    "main.js": "/store-patete-glenda/static/js/main.bd45ff8c.chunk.js",
-    "main.js.map": "/store-patete-glenda/static/js/main.bd45ff8c.chunk.js.map",
+    "main.js": "/store-patete-glenda/static/js/main.0f018e57.chunk.js",
+    "main.js.map": "/store-patete-glenda/static/js/main.0f018e57.chunk.js.map",
     "runtime-main.js": "/store-patete-glenda/static/js/runtime-main.35ae9101.js",
     "runtime-main.js.map": "/store-patete-glenda/static/js/runtime-main.35ae9101.js.map",
-    "static/js/2.33e4a9ca.chunk.js": "/store-patete-glenda/static/js/2.33e4a9ca.chunk.js",
-    "static/js/2.33e4a9ca.chunk.js.map": "/store-patete-glenda/static/js/2.33e4a9ca.chunk.js.map",
+    "static/js/2.89388cca.chunk.js": "/store-patete-glenda/static/js/2.89388cca.chunk.js",
+    "static/js/2.89388cca.chunk.js.map": "/store-patete-glenda/static/js/2.89388cca.chunk.js.map",
     "index.html": "/store-patete-glenda/index.html",
     "static/css/main.1690b49f.chunk.css.map": "/store-patete-glenda/static/css/main.1690b49f.chunk.css.map",
-    "static/js/2.33e4a9ca.chunk.js.LICENSE.txt": "/store-patete-glenda/static/js/2.33e4a9ca.chunk.js.LICENSE.txt"
+    "static/js/2.89388cca.chunk.js.LICENSE.txt": "/store-patete-glenda/static/js/2.89388cca.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.35ae9101.js",
-    "static/js/2.33e4a9ca.chunk.js",
+    "static/js/2.89388cca.chunk.js",
     "static/css/main.1690b49f.chunk.css",
-    "static/js/main.bd45ff8c.chunk.js"
+    "static/js/main.0f018e57.chunk.js"
   ]
 }
