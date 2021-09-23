@@ -2,7 +2,7 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
+  HashRouter,
   Link,
   useRouteMatch,
   useParams
@@ -14,9 +14,9 @@ export default function Router() {
       
 
         <Switch>
-          <Route path="/">
+          <HashRouter path="/">
             <Home />
-          </Route>
+          </HashRouter>
         </Switch>
      
     </Router>
