@@ -6,12 +6,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/redeems">
-            <Redeem />
-          </Route>
+          <Route path="/" exact component={Home} />
+            
+          <Route path="/redeems" component={Redeem} />
+           
         </Switch>  
       </Router>
     </div>
