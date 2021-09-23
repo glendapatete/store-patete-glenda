@@ -32,15 +32,15 @@ export default function Header(){
                             <li>
                                 <Route exact path="/" render={() => 
                                     <a href="/redeems" className="content-header-buy">
-                                        <img src="../images/buy-blue.svg" alt=""/>
+                                        <img src={process.env.PUBLIC_URL + "/images/buy-blue.svg"} alt=""/>
                                     </a>} />
                                 <Route exact path="/redeems" render={() => <a href="/" className="content-header-home"><img src="../images/home.svg" alt=""/></a>} /> 
                             </li>
                             <li className="content-header-add">
                                 <label className="add-label" htmlFor="checkbox">
                                     <input onChange={handleShowAdd} type="checkbox" className="show-add" id="checkbox" />
-                                    <img src="../images/coin.svg" alt=""/>
-                                    <img src="../images/plus.svg" className="coin-plus" alt="Coins"/>
+                                    <img src={process.env.PUBLIC_URL + "/images/coin.svg"} alt=""/>
+                                    <img src={process.env.PUBLIC_URL + "/images/plus.svg"} className="coin-plus" alt="Coins"/>
                                 </label>
                                 <AddCoins display={display} />
                             </li>
@@ -49,7 +49,7 @@ export default function Header(){
                 
             </ul>
             <div className="content-subheader">
-                <img src="../images/header-x1.png" alt=""/>
+                <img src={process.env.PUBLIC_URL + "/images/header-x1.png"} alt=""/>
                 <h1> Electronics</h1>
             </div>
         </header>
