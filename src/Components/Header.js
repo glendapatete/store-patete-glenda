@@ -31,10 +31,10 @@ export default function Header(){
                             </li>
                             <li>
                                 <Route exact path="/" render={() => 
-                                    <a href="/redeems" className="content-header-buy">
+                                    <a href="#/redeems" className="content-header-buy">
                                         <img src={process.env.PUBLIC_URL + "/images/buy-blue.svg"} alt=""/>
                                     </a>} />
-                                <Route exact path="/redeems" render={() => <a href="/" className="content-header-home"><img src={process.env.PUBLIC_URL + "/images/home.svg"} alt=""/></a>} /> 
+                                <Route exact path="/redeems" render={() => <a href="#/" className="content-header-home"><img src={process.env.PUBLIC_URL + "/images/home.svg"} alt=""/></a>} /> 
                             </li>
                             <li className="content-header-add">
                                 <label className="add-label" htmlFor="checkbox">
