@@ -4,7 +4,7 @@ import Redeem from "./Pages/Redeem";
 function App() {
   return (
     <div className="App">
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Switch>
           <Route path="/" exact component={Home} />
             
